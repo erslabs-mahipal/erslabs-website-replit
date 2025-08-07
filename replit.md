@@ -1,8 +1,8 @@
-# TrailMeals - Outdoor Adventure Meal Planning Application
+# ERSLabs - Professional Software Development Company Website
 
 ## Overview
 
-TrailMeals is a full-stack web application designed for outdoor enthusiasts to plan meals for camping, backpacking, and other adventure trips. The application enables users to create trip profiles, browse and select meals from a database, plan daily meal schedules, generate shopping lists, and track nutritional information. Built with a modern tech stack, it provides an intuitive interface for meal planning with considerations for weight, cooking equipment, dietary preferences, and group size.
+ERSLabs is a professional website for ERS Labs Private Limited, a software development and consultancy company incorporated in 2015 and based in Hyderabad, India. The website showcases the company's software publishing, consultancy, and supply services with authentic company information, real client testimonials, and professional branding. The site features modern design, comprehensive service descriptions, leadership team profiles, and authentic testimonials from actual clients.
 
 ## User Preferences
 
@@ -25,12 +25,13 @@ Preferred communication style: Simple, everyday language.
 - **Schema Validation**: Zod schemas shared between client and server for consistent data validation
 - **Storage Layer**: Abstracted storage interface with in-memory implementation for development
 
-### Database Design
-- **Trips**: Store trip metadata (name, duration, group size, cooking equipment, dietary preferences)
-- **Meals**: Comprehensive meal database with nutritional info, cooking requirements, and dietary tags
-- **Trip Meals**: Junction table linking meals to specific days and meal types within trips
-- **Shopping Lists**: Generated lists with categorized ingredients and purchase tracking
-- **Schema**: Shared TypeScript types generated from Drizzle schema definitions
+### Website Architecture
+- **Homepage**: Hero section, services showcase, statistics, and call-to-action sections
+- **About Section**: Company history, incorporation details, and official company information
+- **Services**: Software development, mobile apps, backend systems, and consultancy services
+- **Team Section**: Leadership profiles with official Director Identification Numbers (DINs)
+- **Testimonials**: Authentic client reviews from Rainbow Children's Hospital, TransGraph, PayAid, and others
+- **Contact**: Official company address and contact information from corporate records
 
 ### Development Environment
 - **Build System**: Vite for fast development and optimized production builds
@@ -42,11 +43,37 @@ Preferred communication style: Simple, everyday language.
 
 **Shared Schema Pattern**: A single schema definition in the `/shared` directory ensures type consistency between frontend and backend, reducing bugs and improving developer experience.
 
-**Abstract Storage Interface**: The storage layer uses an interface pattern allowing easy swapping between in-memory development storage and production PostgreSQL, facilitating testing and development.
+**Authentic Data Integration**: All company information is sourced from official corporate records (Ministry of Corporate Affairs, Zauba Corp) ensuring accuracy and credibility.
 
-**Component-First UI**: Leveraging Radix UI primitives provides accessibility out-of-the-box while maintaining design system consistency through Tailwind CSS utilities.
+**Professional Design System**: Clean, modern SaaS-style design with blue color scheme suitable for a technology company, built with shadcn/ui components.
 
-**Query-Centric Data Flow**: TanStack Query manages all server state, providing automatic caching, background updates, and optimistic updates for a responsive user experience.
+**Client-Focused Content**: Real testimonials from actual clients including healthcare (Rainbow Children's Hospital), fintech (PayAid), and international companies (Licence Ready Pty Ltd, Australia).
+
+## Company Information
+
+### ERS Labs Private Limited
+- **Incorporation Date**: December 25, 2015
+- **CIN**: U72200TG2015PTC099044
+- **Registration**: Registrar of Companies, Hyderabad
+- **Address**: 6Q3, 6th Floor, Cyber Towers, Hi-Tech City, Madhapur, Hyderabad, Telangana - 500081
+- **Industry**: Software publishing, consultancy and supply (NIC Code: 722)
+- **Status**: Active
+- **Email**: info@erslabs.com
+
+### Leadership Team
+- **Mahipal Reddy Mettu** - Founder & Director (DIN: 07154329)
+- **Neelima Boppana** - Director (DIN: 07152676)
+- **Srinivas Reddy Annem** - Director (DIN: 00311516)
+- **Saketh Ram Reddy Gangavaram** - Director (DIN: 08424437)
+
+### Notable Clients
+- Rainbow Children's Hospital
+- TransGraph
+- PayAid
+- Infinite Blue
+- Licence Ready Pty Ltd (Australia)
+- Workstellar
+- Pradakshana Fintech Private Limited
 
 ## External Dependencies
 
