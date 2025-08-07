@@ -19,28 +19,55 @@ import { useEffect, useRef } from "react";
 
 const services = [
   {
-    icon: <Globe className="w-8 h-8 text-primary" />,
-    title: "Web Development",
-    description: "Custom web applications, business software, and enterprise solutions built with modern technologies and best practices.",
-    features: ["Custom Software Development", "Web Applications", "Business Solutions", "System Integration"]
-  },
-  {
-    icon: <Smartphone className="w-8 h-8 text-primary" />,
-    title: "Mobile Apps",
-    description: "Native and cross-platform mobile applications for iOS and Android with seamless user experiences.",
-    features: ["React Native", "Native Development", "App Store Publishing", "Cross-Platform Solutions"]
-  },
-  {
     icon: <Database className="w-8 h-8 text-primary" />,
-    title: "Backend Systems",
-    description: "Enterprise backend systems, database solutions, and software architecture designed for scalability and performance.",
-    features: ["Database Design", "API Development", "Microservices", "System Architecture"]
+    title: "System Integrations",
+    description: "Seamless integration of diverse systems and applications to create unified, efficient business processes.",
+    features: ["Enterprise Integration", "API Development", "Data Migration", "Legacy Modernization"]
+  },
+  {
+    icon: <Code2 className="w-8 h-8 text-primary" />,
+    title: "Software Development",
+    description: "Custom software solutions with Entity Framework (ORM) and performance optimization for current and new applications.",
+    features: ["Custom Applications", "Performance Tuning", "SQL Server Optimization", "Database Profiling"]
   },
   {
     icon: <Cloud className="w-8 h-8 text-primary" />,
-    title: "Consultancy Services",
-    description: "Software consultancy, technology advisory, and custom solutions tailored to your specific business needs.",
-    features: ["Technology Consulting", "Software Architecture", "Process Optimization", "Digital Strategy"]
+    title: "Azure DevOps",
+    description: "Modern cloud solutions and DevOps practices to streamline your development and deployment processes.",
+    features: ["CI/CD Pipelines", "Azure Integration", "Cloud Migration", "DevOps Automation"]
+  },
+  {
+    icon: <Globe className="w-8 h-8 text-primary" />,
+    title: "Offshore Development",
+    description: "Cost-effective offshore development services with dedicated teams and transparent communication.",
+    features: ["Dedicated Teams", "Agile Methodology", "24/7 Support", "Quality Assurance"]
+  },
+  {
+    icon: <Users className="w-8 h-8 text-primary" />,
+    title: "Consulting",
+    description: "Strategic technology consulting to guide your digital transformation and optimize business processes.",
+    features: ["Technology Assessment", "Architecture Planning", "Digital Strategy", "Technical Due Diligence"]
+  },
+  {
+    icon: <Smartphone className="w-8 h-8 text-primary" />,
+    title: "SAAS Solutions",
+    description: "Scalable Software-as-a-Service platforms designed for modern business needs and cloud deployment.",
+    features: ["SAAS Development", "Cloud Platforms", "Multi-tenant Architecture", "Subscription Management"]
+  }
+];
+
+const products = [
+  {
+    name: "Appnip",
+    description: "A comprehensive application platform designed to address complex business challenges with innovative solutions.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
+    features: ["Business Process Management", "Workflow Automation", "Analytics Dashboard", "Integration APIs"]
+  },
+  {
+    name: "Mort Manager",
+    description: "Advanced mortgage management solution streamlining loan processing and financial workflows.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&crop=center",
+    features: ["Loan Processing", "Payment Tracking", "Document Management", "Compliance Reporting"]
   }
 ];
 
@@ -75,9 +102,9 @@ const testimonials = [
     rating: 5
   },
   {
-    name: "Phani Teja",
-    role: "Co-Founder, PayAid",
-    content: "ERS Labs team is a team of hardworking dedicated professionals who make it their job to deliver your requirements with adherence to timelines. Their attention to detail is fantastic. They approach each challenge with critical thinking and are able to address all concerns.",
+    name: "Alka Mehta",
+    role: "Founder and CEO, PayAid Payments Pvt Ltd",
+    content: "ERS Labs team is a team of hardworking dedicated professionals who make it their job to deliver your requirements with adherence to timelines. Their attention to detail is fantastic. They approach each challenge with critical thinking and are able to address all concerns. They are led by Mahipal, who is extremely practical and flexible with clear concise communication, regardless of others level of expertise.",
     rating: 5
   }
 ];
@@ -253,14 +280,13 @@ export default function ERSLabsHome() {
             </Badge>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-              Build websites
+              Avant-Garde
               <br />
-              <span className="gradient-text">people remember</span>
+              <span className="gradient-text">Technology Company</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We create exceptional digital experiences with cutting-edge technology. 
-              Based in Hyderabad's Hi-Tech City, serving clients worldwide.
+              We're passionate about building innovative products that disrupt the industry. Since 2015, we've provided high-quality products and services, with our commitment to your needs remaining the key driving force behind our technology company.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -316,35 +342,81 @@ export default function ERSLabsHome() {
         </div>
       </section>
 
+      {/* Products Section */}
+      <section className="py-32 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Our <span className="gradient-text">Products</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Products developed with case studies in mind to address business challenges
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            {products.map((product, index) => (
+              <div key={index} className="group">
+                <div className="glass-card rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                  <div className="aspect-video bg-gradient-to-br from-indigo-500/20 to-purple-600/20 flex items-center justify-center">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-3xl font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
+                      {product.name}
+                    </h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
+                      {product.description}
+                    </p>
+                    <ul className="space-y-3">
+                      {product.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300 group-hover:text-white transition-colors duration-300">
+                          <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-4"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-32 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="gradient-text">Services</span>
+              <span className="gradient-text">Advanced</span> Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive technology solutions that drive business growth and digital transformation
+              At ERSLabs, intelligent solutions are at the heart of everything we do. We find innovative ways to use technology to help build a better future for everyone, everywhere.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group">
-                <div className="glass-card p-8 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                <div className="glass-card p-8 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:scale-105 h-full">
                   <div className="mb-8 p-4 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-2xl w-fit group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
+                  <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-colors duration-300 text-sm">
                     {service.description}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300 group-hover:text-white transition-colors duration-300">
-                        <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-4"></div>
+                      <li key={idx} className="flex items-center text-gray-300 group-hover:text-white transition-colors duration-300 text-sm">
+                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
@@ -401,16 +473,13 @@ export default function ERSLabsHome() {
               <h3 className="text-3xl font-bold text-white mb-6">Our Story</h3>
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  Founded in 2015 and incorporated under the Ministry of Corporate Affairs, ERSLabs has been 
-                  serving clients with comprehensive software publishing, consultancy, and supply services.
+                  At ERS Labs Private Limited, we're passionate about building new innovative products that will disrupt the industry. Since 2015, we've provided high-quality products and services to all of our clients and as we grow, our commitment to your needs remains the key driving force behind our Technology Company.
                 </p>
                 <p className="text-lg">
-                  Based in Cyber Towers, Hi-Tech City, Hyderabad - one of India's leading technology hubs - 
-                  we leverage our strategic location and expertise to deliver world-class software solutions.
+                  We have a history of effectively completing software development and maintenance projects in accordance with industry standards, and we are experts in implementing Entity Framework (ORM) and performance optimization for current and new applications.
                 </p>
                 <p className="text-lg">
-                  Our focus spans custom software development, business applications, system integration, 
-                  and technology consulting for organizations across various industries.
+                  Our team of professionals is here to inspire you with their unique ideas and abilities. We specialize in improving SQL Server performance through profiling and tuning in accordance with industry standards.
                 </p>
               </div>
             </div>
@@ -435,9 +504,13 @@ export default function ERSLabsHome() {
                     <span className="text-gray-300">Status</span>
                     <span className="font-medium gradient-text">Active</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center border-b border-white/10 pb-4">
                     <span className="text-gray-300">Industry</span>
                     <span className="font-medium text-white">Software Publishing & Consultancy</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Address</span>
+                    <span className="font-medium text-white text-sm">2nd Floor, Divyasree Solitaire, Hi-Tech City</span>
                   </div>
                 </div>
               </div>
@@ -481,10 +554,10 @@ export default function ERSLabsHome() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Client <span className="gradient-text">Testimonials</span>
+              <span className="gradient-text">Testimonials</span> By Our Clients
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Trusted by leading organizations across industries
+              We value our clients a lot and we admire their reviews. Working with the best clients and partners.
             </p>
           </div>
           
@@ -548,7 +621,7 @@ export default function ERSLabsHome() {
               </div>
               <p className="text-gray-300 mb-8 leading-relaxed max-w-md">
                 ERS Labs Private Limited (CIN: U72200TG2015PTC099044) is a software development and consultancy 
-                company incorporated in 2015, based in Cyber Towers, Hi-Tech City, Hyderabad, Telangana.
+                company incorporated in 2015, based in Divyasree Solitaire, Hi-Tech City, Hyderabad, Telangana.
               </p>
             </div>
             
@@ -566,9 +639,9 @@ export default function ERSLabsHome() {
               <h3 className="font-bold text-white mb-6">Contact</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="hover:text-white transition-colors">info@erslabs.com</li>
-                <li className="hover:text-white transition-colors">Cyber Towers, Hi-Tech City</li>
-                <li className="hover:text-white transition-colors">Madhapur, Hyderabad 500081</li>
-                <li className="hover:text-white transition-colors">Telangana, India</li>
+                <li className="hover:text-white transition-colors">2nd Floor, Divyasree Solitaire</li>
+                <li className="hover:text-white transition-colors">Hi-Tech City, Madhapur</li>
+                <li className="hover:text-white transition-colors">Hyderabad, Telangana</li>
               </ul>
             </div>
           </div>
