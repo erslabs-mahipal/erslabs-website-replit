@@ -372,7 +372,7 @@ export default function ERSLabsHome() {
                     <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
                       {product.description}
                     </p>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 mb-6">
                       {product.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-300 group-hover:text-white transition-colors duration-300">
                           <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-4"></div>
@@ -380,6 +380,14 @@ export default function ERSLabsHome() {
                         </li>
                       ))}
                     </ul>
+                    {product.name === "Mort Manager" && (
+                      <Link href="/mort-manager">
+                        <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0 w-full group-hover:scale-105 transition-all duration-300">
+                          Learn More
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
